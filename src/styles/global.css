@@ -50,7 +50,7 @@ h2 {
 p {
     font-family: var(--body);
     font-size: 1.1rem;
-    hyphens: auto;
+    /* hyphens: auto; */
     line-height: 1.5;
     text-indent: 1rem;
 }
@@ -201,12 +201,17 @@ small, li {
 }
 
 /* Skills */
-.skills {
-    margin-top: 8px;
+.skills_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 0.6rem;
 }
 
-.skills__img {
-    margin: 8px 4px;
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 }
 
 /* Items */
@@ -357,18 +362,9 @@ html.light {
         text-align: center;
     }
 
-    .navbar__menu {
-        text-align: center;
-    }
-
-    .navbar__menu > a {
-        margin: 0 11px;
-    }
-
     .skills__img {
         height: 30px;
         width: 30px;
-        margin: 8px 1px;
     }
 
     .badge__list {
