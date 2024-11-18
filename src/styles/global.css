@@ -74,16 +74,16 @@ small, li {
 .navbar__menu {
     font-family: var(--body);
     font-size: 1.1rem;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .navbar__title > a, .navbar__menu > a {
     color: var(--text);
     text-decoration: none;
-}
-
-.navbar__menu > a {
-    margin: 0 10px;
 }
 
 .navbar__title > a:hover, .navbar__menu > a:hover, .navbar__menu > a:focus {
