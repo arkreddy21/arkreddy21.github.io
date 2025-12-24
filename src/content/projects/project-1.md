@@ -1,5 +1,5 @@
 ---
-title: 'Project 1'
+title: 'Hardware/Software Co-Design of Distributed Robotic Systems'
 description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci'
 image:
     url: '/GitHub.webp'
@@ -10,8 +10,8 @@ worksImage1:
 worksImage2:
     url: '/image-2.webp'
     alt: 'second image of your project.'
-platform: Web
-stack: Astro, JavaScript
+platform: Embedded FPGA
+stack: ROS2, C++
 website: https://astro-milky-way.netlify.app/
 github: https://github.com/ttomczak3/Milky-Way
 ---

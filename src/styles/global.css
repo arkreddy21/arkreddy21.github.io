@@ -378,3 +378,40 @@ html.light {
     }
 }
 
+.education-timeline {
+    position: relative;
+    padding-left: 30px; /* Space for the border */
+    margin: 20px 0;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px; /* Position of the vertical line */
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Width of the border */
+    background-color: #2a2a2a; /* Color of the border */
+}
+
+.education-timeline .experience {
+    margin-bottom: 20px; /* Space between each education entry */
+    position: relative;
+}
+
+.education-timeline .experience p {
+    margin: 0; /* Remove default margin */
+}
+
+.education-timeline .experience p:first-child {
+    font-size: 0.9em; /* Smaller font for the years */
+    color: #666; /* Color for the years */
+}
+
+.education-timeline .experience p:nth-child(2) {
+    font-weight: bold; /* Bold for the university name */
+}
+
+.education-timeline .experience p:nth-child(3) {
+    font-style: italic; /* Italic for the degree */
+}
