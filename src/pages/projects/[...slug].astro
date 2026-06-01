@@ -5,7 +5,7 @@ import MarkdownWorksLayout from '../../layouts/MarkdownWorksLayout.astro';
 export async function getStaticPaths() {
     const projectEntries = await getCollection('projects');
     return projectEntries.map(entry => ({
-        params: { slug: entry.slug }, props: { entry },
+        params: { slug: entry.id }, props: { entry },
   }));
 }
 

@@ -1,12 +1,12 @@
 /* Global styles */
 :root {
     --background: #1e1e2e;
-    --background-light: #fdebf3;
-    --button: #78c2ad;
-    --text: #fdebf3;
-    --text-light: #1e1e2e;
-    --text-link: #78c2ad;
-    --underline: #375a7f;
+    --background-light: #eff1f5;
+    --text: #cdd6f4;
+    --text-light: #4c4f69;
+    --text-link: #94e2d5;
+    --button: #94e2d5;
+    --underline: #a6adc8;
     --header: 'Pacifico', cursive;
     --body: 'Josefin Sans', sans-serif;
 }
@@ -14,6 +14,15 @@
 html {
     background-color: var(--background);
     color: var(--text);
+}
+
+/* Theme Icon */
+html.light {
+    --text-link: #179299;
+    --button: #179299;
+    --underline: #6c6f85;
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
 body {
@@ -133,6 +142,23 @@ small, li {
 
 .badge__link:hover {
     text-decoration: underline;
+}
+
+.credential-link {
+    color: var(--text-link);
+    display: inline-flex;
+    margin-left: 0.35rem;
+    vertical-align: -0.1em;
+}
+
+.credential-link:hover, .credential-link:focus {
+    color: var(--underline);
+}
+
+.credential-link > svg {
+    fill: currentColor;
+    height: 1rem;
+    width: 1rem;
 }
 
 /* Cards */
@@ -294,12 +320,6 @@ footer {
     text-decoration: none;
 }
 
-/* Theme Icon */
-html.light {
-    background-color: var(--background-light);
-    color: var(--text-light);
-}
-
 .light .navbar__title > a {
     color: var(--text-light);
 }
@@ -379,68 +399,113 @@ html.light {
 }
 
 .education-timeline {
+    --timeline-line-left: 10px;
+    --timeline-line-width: 2px;
+    --timeline-content-offset: 30px;
+    --timeline-dot-size: 10px;
+    --timeline-dot-border: 0px;
+    --timeline-dot-outer: calc(var(--timeline-dot-size) + (var(--timeline-dot-border) * 2));
+    --timeline-dot-top: 0.42rem;
+    --timeline-dot-fill: var(--text);
+    --timeline-dot-border-color: var(--timeline-dot-fill);
+    --timeline-current-color: #b4befe;
     position: relative;
-    padding-left: 30px; /* Space for the border */
+    padding-left: var(--timeline-content-offset);
     margin: 20px 0;
 }
 
 .education-timeline::before {
     content: '';
     position: absolute;
-    left: 10px; /* Position of the vertical line */
+    left: var(--timeline-line-left);
     top: 0;
     bottom: 0;
-    width: 2px; /* Width of the border */
-    background-color: var(--text); /* Color of the border - adapts to dark mode */
+    width: var(--timeline-line-width);
+    background-color: var(--text);
 }
 
 .education-timeline .experience {
-    margin-bottom: 20px; /* Space between each education entry */
+    margin-bottom: 20px;
     position: relative;
+}
+
+.education-timeline .experience:last-child {
+    margin-bottom: 0;
 }
 
 /* Timeline dot */
 .education-timeline .experience::after {
     content: '';
     position: absolute;
-    left: -25px; /* Adjust to center on the line (30px padding - 6px radius = 24px) */
-    top: 5px; /* Adjust vertical alignment */
-    width: 10px;
-    height: 10px;
+    box-sizing: border-box;
+    left: calc(
+        var(--timeline-line-left) + (var(--timeline-line-width) / 2) - var(--timeline-content-offset) - (var(--timeline-dot-outer) / 2)
+    );
+    top: var(--timeline-dot-top);
+    width: var(--timeline-dot-outer);
+    height: var(--timeline-dot-outer);
     border-radius: 50%;
-    background-color: var(--background); /* Match background to look like a ring or filled dot */
-    border: 2px solid var(--text); /* Border color matches text */
+    background-color: var(--timeline-dot-fill);
+    border: var(--timeline-dot-border) solid var(--timeline-dot-border-color);
     z-index: 1;
 }
 
+.education-timeline .experience--current {
+    --timeline-dot-size: 12px;
+    --timeline-dot-fill: var(--timeline-current-color);
+    --timeline-dot-border-color: var(--timeline-current-color);
+}
+
+.education-timeline .experience--past {
+    --timeline-dot-fill: var(--text);
+    --timeline-dot-border-color: var(--text);
+}
+
 .education-timeline .experience p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    text-indent: 0;
 }
 
-.education-timeline .experience p:first-child {
-    font-size: 0.9em; /* Smaller font for the years */
-    color: var(--text); /* Color for the years - adapts to dark mode */
-    opacity: 0.8; /* Slightly dimmer than main text */
+.education-timeline .experience__date {
+    font-size: 0.9em;
+    color: var(--text);
+    opacity: 0.8;
 }
 
-.education-timeline .experience p:nth-child(2) {
-    font-weight: bold; /* Bold for the university name */
+.education-timeline .experience__title {
+    font-weight: bold;
 }
 
-.education-timeline .experience p:nth-child(3) {
-    font-style: italic; /* Italic for the degree */
+.education-timeline .experience__detail {
+    font-style: italic;
+}
+
+.work-timeline .experience__description {
+    margin-top: 0.45rem;
+    opacity: 0.92;
 }
 
 /* Light mode overrides for timeline */
+.light .education-timeline {
+    --timeline-dot-fill: var(--text-light);
+    --timeline-dot-border-color: var(--text-light);
+    --timeline-current-color: #7287fd;
+}
+
 .light .education-timeline::before {
     background-color: var(--text-light);
 }
 
-.light .education-timeline .experience::after {
-    background-color: var(--background-light);
-    border-color: var(--text-light);
+.light .education-timeline .experience--current {
+    --timeline-dot-fill: var(--timeline-current-color);
+    --timeline-dot-border-color: var(--timeline-current-color);
 }
 
-.light .education-timeline .experience p:first-child {
+.light .education-timeline .experience--past {
+    --timeline-dot-fill: var(--text-light);
+    --timeline-dot-border-color: var(--text-light);
+}
+
+.light .education-timeline .experience__date {
     color: var(--text-light);
 }
