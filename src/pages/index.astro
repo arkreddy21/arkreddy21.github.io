@@ -5,7 +5,7 @@ const pageTitle = "Rama Krishna's Portfolio";
 
 <Layout pageTitle={pageTitle}>
 	<div class='gif'>
-		<img width='300' height='259' alt='RaccoonSpaceGif' src='/space.webp' />
+		<img width='300' height='259' alt='ManWorkingOnLaptop' src='/space.webp' />
 	</div>
 
 	<h1>Rama Krishna</h1>
@@ -13,135 +13,102 @@ const pageTitle = "Rama Krishna's Portfolio";
 	<!-- <span class='badge'>Digital Craftsman</span> -->
 
 	<h2>About</h2>
-	<p>A Curious engineer who loves to build things.</p>
-<!-- 	<div class='center'>
+	<p>Low-level engineer passionate about hardware-accelerated computing.</p>
+	<p>
+	I work at the hardware-software boundary — programming FPGAs, DPUs, and
+    similar platforms to squeeze out performance wherever it's needed most:
+    robotics, high-speed networking, LLM inference, and beyond.
+	</p>
+	<div class='center'>
 		<a href='/works/'>
 			<button class='btn'>My portfolio</button>
 		</a>
-	</div> -->
-
-	<h2>Interests</h2>
-	<p>
-		I'm passionate about electronics and low-level programming. <br>
-		My current interest lies in building FPGA based hardware accelerated applications, particularly in robotics.
-	</p>
+	</div>
 
 	<h2>Skills</h2>
 	<div class='skills_grid'>
 		<h3>Languages</h3>
 		<div class='skills center'>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='C'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg'
-			/>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='C++'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg'
-			/>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='Python'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'
-			/>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='TypeScript'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
-			/>
-			<!-- <img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='JavaScript'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
-			/>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='React'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
-			/> -->
+			<p>C</p>
+			<p>C++</p>
+			<p>Python</p>
+			<p>Javascript</p>
+			<p>VHDL</p>
 		</div>
 		<h3>Technologies</h3>
 		<div class='skills center'>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='PostgreSQL'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg'
-			/>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='Linux'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg'
-			/>
+			<p>FPGA</p>
+			<p>Microcontrollers</p>
+			<p>Linux</p>
 		</div>
 		<h3>Tools</h3>
 		<div class='skills center'>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='Git'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg'
-			/>
-			<img
-				class='skills__img'
-				width='46'
-				height='46'
-				alt='Git'
-				src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg'
-			/>
+			<p>MATLAB</p>
+			<p>Vivado</p>
+			<p>Git</p>
+		</div>
+	</div>
+
+	<h2>Work Experience</h2>
+	<div class='education-timeline'>
+		<div class='experience'>
+			<p>2026 - Present</p>
+			<p>Student Research Assistant</p>
+			<p>Computer Networks Group, Paderborn University</p>
+			<p>Working on accelerating serverless LLM inference</p>
 		</div>
 	</div>
 
 	<h2>Education</h2>
-	<div class="education-timeline">
-	  <div class="experience">
-	    <p>2025 - Present</p>
-	    <p>Paderborn University</p>
-	    <p>Computer Engineering <span class="badge">M.Sc</span></p>
-	  </div>
-	  <div class="experience">
-	    <p>2019 - 2023</p>
-	    <p>National Institute of Technology, Trichy</p>
-	    <p>Electrical and Electronics Engineering <span class="badge">B.Tech</span></p>
-	  </div>
+	<div class='education-timeline'>
+		<div class='experience'>
+			<p>2025 - Present</p>
+			<p>Paderborn University</p>
+			<p>Computer Engineering <span class='badge'>M.Sc</span></p>
+		</div>
+		<div class='experience'>
+			<p>2019 - 2023</p>
+			<p>National Institute of Technology, Trichy</p>
+			<p>Electrical and Electronics Engineering <span class='badge'>B.Tech</span></p>
+		</div>
 	</div>
 
-	<h2>Works</h2>
+	<h2>Projects</h2>
 	<div>
 		<h3>Hardware/Software Co-Design of Distributed Robotic Systems</h3>
 	</div>
 	<div>
 		<h3>A Novel Three-Port Converter for Battery and Ultra Capacitor based Electric Vehicle</h3>
-		<a href="https://ieeexplore.ieee.org/document/10245382" target="_blank">IEEE</a>
-		<p>This research presents a three-port DC-DC converter for connecting a Li-ion battery and an ultracapacitor
-			to the drive system of an electric vehicle (EV). The suggested converter handles pulse currents in an EV drive
-			train by utilizing an ultracapacitor and steady state current with a battery. The ultracapacitor and DC bus
-			ports can transmit power in both directions, allowing the ultracapacitor to supply and absorb peak currents
-			during acceleration and braking.</p>
+		<a href='https://ieeexplore.ieee.org/document/10245382' target='_blank'>IEEE</a>
+		<p>
+			This research presents a three-port DC-DC converter for connecting a Li-ion battery and an ultracapacitor to the
+			drive system of an electric vehicle (EV). The suggested converter handles pulse currents in an EV drive train by
+			utilizing an ultracapacitor and steady state current with a battery. The ultracapacitor and DC bus ports can
+			transmit power in both directions, allowing the ultracapacitor to supply and absorb peak currents during
+			acceleration and braking.
+		</p>
 	</div>
 
 	<h2>Certificates</h2>
 	<div>
-		<h3>Tiny Machine Learning (TinyML) <span><a href="https://credentials.edx.org/credentials/c42f617cc11e4695aefb017ee537ed38/" target="_blank">Credential</a></span></h3>
+		<h3>
+			Tiny Machine Learning (TinyML) <span
+				><a href='https://credentials.edx.org/credentials/c42f617cc11e4695aefb017ee537ed38/' target='_blank'
+					>Credential</a
+				></span>
+		</h3>
 	</div>
 	<div>
-		<h3>Advanced Embedded Systems on Arm <span><a href="https://credentials.edx.org/credentials/969685501e4b474e9bafb55c49894e51/" target="_blank">Credential</a></span></h3>
+		<h3>
+			Advanced Embedded Systems on Arm <span
+				><a href='https://credentials.edx.org/credentials/969685501e4b474e9bafb55c49894e51/' target='_blank'
+					>Credential</a
+				></span>
+		</h3>
+	</div>
+
+	<h2>Hobby Projects</h2>
+	<div>
+		
 	</div>
 </Layout>

@@ -1,14 +1,14 @@
 /* Global styles */
 :root {
-    --background: #1e1e2e; 
+    --background: #1e1e2e;
     --background-light: #fdebf3;
     --button: #78c2ad;
     --text: #fdebf3;
-    --text-light: #1e1e2e; 
+    --text-light: #1e1e2e;
     --text-link: #78c2ad;
     --underline: #375a7f;
     --header: 'Pacifico', cursive;
-    --body: 'Josefin Sans', sans-serif; 
+    --body: 'Josefin Sans', sans-serif;
 }
 
 html {
@@ -56,7 +56,7 @@ p {
 }
 
 small, li {
-    font-family: var(--body); 
+    font-family: var(--body);
 }
 
 /* Navigation Bar */
@@ -204,14 +204,14 @@ small, li {
 .skills_grid {
     display: grid;
     grid-template-columns: auto auto;
-    row-gap: 0.6rem;
+    row-gap: 0rem;
 }
 
 .skills {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 0rem;
 }
 
 /* Items */
@@ -309,11 +309,11 @@ html.light {
 }
 
 .light .card__title {
-    color: var(--text-light); 
+    color: var(--text-light);
 }
 
 .light .card__txt {
-    color: var(--text-light); 
+    color: var(--text-light);
 }
 
 .light .btn {
@@ -391,12 +391,26 @@ html.light {
     top: 0;
     bottom: 0;
     width: 2px; /* Width of the border */
-    background-color: #2a2a2a; /* Color of the border */
+    background-color: var(--text); /* Color of the border - adapts to dark mode */
 }
 
 .education-timeline .experience {
     margin-bottom: 20px; /* Space between each education entry */
     position: relative;
+}
+
+/* Timeline dot */
+.education-timeline .experience::after {
+    content: '';
+    position: absolute;
+    left: -25px; /* Adjust to center on the line (30px padding - 6px radius = 24px) */
+    top: 5px; /* Adjust vertical alignment */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--background); /* Match background to look like a ring or filled dot */
+    border: 2px solid var(--text); /* Border color matches text */
+    z-index: 1;
 }
 
 .education-timeline .experience p {
@@ -405,7 +419,8 @@ html.light {
 
 .education-timeline .experience p:first-child {
     font-size: 0.9em; /* Smaller font for the years */
-    color: #666; /* Color for the years */
+    color: var(--text); /* Color for the years - adapts to dark mode */
+    opacity: 0.8; /* Slightly dimmer than main text */
 }
 
 .education-timeline .experience p:nth-child(2) {
@@ -414,4 +429,18 @@ html.light {
 
 .education-timeline .experience p:nth-child(3) {
     font-style: italic; /* Italic for the degree */
+}
+
+/* Light mode overrides for timeline */
+.light .education-timeline::before {
+    background-color: var(--text-light);
+}
+
+.light .education-timeline .experience::after {
+    background-color: var(--background-light);
+    border-color: var(--text-light);
+}
+
+.light .education-timeline .experience p:first-child {
+    color: var(--text-light);
 }
