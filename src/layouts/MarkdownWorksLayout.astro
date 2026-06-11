@@ -1,6 +1,24 @@
 ---
 import BaseLayout from './Layout.astro';
 const { frontmatter } = Astro.props;
+
+const fixedKeys = new Set(['title', 'description', 'image', 'worksImage1', 'worksImage2']);
+
+interface BadgeItem {
+  label: string;
+  value: string;
+  url?: string;
+}
+
+const badges: BadgeItem[] = [];
+for (const [key, value] of Object.entries(frontmatter)) {
+  if (fixedKeys.has(key) || typeof value !== 'string') continue;
+  if (value.startsWith('http://') || value.startsWith('https://')) {
+    badges.push({ label: key.toUpperCase(), value, url: value });
+  } else {
+    badges.push({ label: key.toUpperCase(), value });
+  }
+}
 ---
 <BaseLayout pageTitle={frontmatter.title}>
     <div class="gif">
@@ -8,15 +26,22 @@ const { frontmatter } = Astro.props;
     </div>
     <h2>{frontmatter.title}</h2>
     <slot />
-    <ul class="badge__list">
-        <li><span class="badge badge--item">PLATFORM</span>{frontmatter.platform}</li>
-        <li><span class="badge badge--item">STACK</span>{frontmatter.stack}</li>
-        <li><span class="badge badge--item">WEBSITE</span><a class="badge__link" href={frontmatter.website} target="_blank">{frontmatter.website}</a></li>
-        <li><span class="badge badge--item">GITHUB</span><a class="badge__link" href={frontmatter.github} target="_blank">{frontmatter.github}</a></li>
-    </ul>
+    {badges.length > 0 && (
+      <ul class="badge__list">
+        {badges.map(badge => (
+          <li>
+            <span class="badge badge--item">{badge.label}</span>
+            {badge.url
+              ? <a class="badge__link" href={badge.url} target="_blank">{badge.value}</a>
+              : badge.value
+            }
+          </li>
+        ))}
+      </ul>
+    )}
     <div class="center">
-        <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
-        <img class="pro-img" width="500px" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
+        <img class="pro-img" width="500" height="281" src={frontmatter.worksImage1.url} alt={frontmatter.worksImage1.alt} />
+        <img class="pro-img" width="500" height="281" src={frontmatter.worksImage2.url} alt={frontmatter.worksImage2.alt} />
     </div>
 </BaseLayout>
 

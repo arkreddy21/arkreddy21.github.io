@@ -1,23 +1,21 @@
 ---
 title: 'Hardware/Software Co-Design of Distributed Robotic Systems'
-description: 'Hardware/software co-design project for distributed robotic systems using C++, ROS2, and FPGA acceleration.'
+description: 'This project explores hardware/software co-design for distributed robotic systems, with compute-heavy workloads mapped to FPGA acceleration.'
 image:
-    url: '/GitHub.webp'
+    url: '/roshscode_setup.svg'
     alt: 'GitHub wallpaper'
 worksImage1:
-    url: '/image-1.webp'
-    alt: 'first image of your project.'
+    url: '/roshscode_robots.svg'
+    alt: 'robots - mobile robot and robotic arm'
 worksImage2:
-    url: '/image-2.webp'
-    alt: 'second image of your project.'
+    url: '/roshscode_setup.svg'
+    alt: 'project setup'
 platform: Distributed robotic systems
 stack: C++, ROS2, FPGA
-website: https://astro-milky-way.netlify.app/
-github: https://github.com/ttomczak3/Milky-Way
+# website: https://astro-milky-way.netlify.app/
+# github: https://github.com/ttomczak3/Milky-Way
 ---
-
-This project explores hardware/software co-design for distributed robotic systems, with compute-heavy workloads mapped to FPGA acceleration while keeping system orchestration and robot behavior in software.
-
-The focus is on splitting responsibilities across embedded hardware and software layers so robotic applications can achieve lower latency, deterministic behavior, and better use of available compute resources.
-
-Technologies: C++, ROS2, FPGA, embedded systems.
+- Developed a distributed, multi-robot application using ROS2.
+- Implemented autonomous navigation, including real-time obstacle avoidance, and applying robotic perception algorithms for object manipulation.
+- Developed and evaluating SLAM algorithms for robot localization and mapping in dynamic environments.
+- Integrated FPGA-based hardware acceleration using ReconROS to optimize compute-intensive nodes, such as perception and control loops.

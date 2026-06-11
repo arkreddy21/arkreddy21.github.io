@@ -240,6 +240,10 @@ small, li {
     gap: 0rem;
 }
 
+.skills p {
+    white-space: nowrap;
+}
+
 /* Items */
 .center {
     text-align: center;
@@ -248,6 +252,8 @@ small, li {
 .pro-img {
     border-radius: 16px;
     margin-top: 10px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* Footer */
@@ -277,7 +283,7 @@ footer {
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    border: 2px solid #fdebf3;
+    border: 2px solid #f5e0dc;
 }
 
 .icon__link:hover {
@@ -294,7 +300,7 @@ footer {
 }
 
 .linked-in {
-    content: url("/li-in-white.png");
+    content: url("/linkedin-icon-white.svg");
 }
 
 /* 404 */
@@ -361,7 +367,7 @@ footer {
 }
 
 .light .linked-in {
-    content: url("/li-in.png");
+    content: url("/linkedin-icon.svg");
 }
 
 .light .badge__link {
