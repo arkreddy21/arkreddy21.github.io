@@ -2,13 +2,13 @@
 title: 'Hardware/Software Co-Design of Distributed Robotic Systems'
 description: 'This project explores hardware/software co-design for distributed robotic systems, with compute-heavy workloads mapped to FPGA acceleration.'
 image:
-    url: '/roshscode_setup.svg'
-    alt: 'GitHub wallpaper'
+    url: '/roshscode_setup.webp'
+    alt: 'Project setup'
 worksImage1:
-    url: '/roshscode_robots.svg'
+    url: '/roshscode_robots.webp'
     alt: 'robots - mobile robot and robotic arm'
 worksImage2:
-    url: '/roshscode_setup.svg'
+    url: '/roshscode_setup.webp'
     alt: 'project setup'
 platform: Distributed robotic systems
 stack: C++, ROS2, FPGA
