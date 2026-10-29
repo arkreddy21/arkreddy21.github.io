@@ -165,6 +165,178 @@ small, li {
     width: 1rem;
 }
 
+/* Personal page */
+.personal-intro {
+    margin: 4.5rem 0 3.5rem;
+    text-align: center;
+}
+
+
+.personal-intro h1 {
+    margin: 0.35rem 0 0.75rem;
+}
+
+.personal-intro__lede {
+    margin: 0 auto;
+    max-width: 30rem;
+    text-align: center;
+    text-indent: 0;
+}
+
+.personal-section {
+    margin-top: 3.75rem;
+}
+
+.personal-section > h2 {
+    margin-top: 0;
+}
+
+.personal-section > p:not(.reading-list__note) {
+    margin-top: 1.35rem;
+}
+
+.personal-list {
+    border-top: 1px solid var(--underline);
+    margin-top: 1.75rem;
+}
+
+.personal-item {
+    align-items: start;
+    border-bottom: 1px solid var(--underline);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2rem 1fr auto;
+    padding: 1.3rem 0;
+}
+
+.personal-item__number {
+    color: var(--text-link);
+    font-family: var(--body);
+    font-size: 0.9rem;
+    padding-top: 0.25rem;
+}
+
+.personal-item h3, .interest-card h3 {
+    margin: 0;
+}
+
+.personal-item p, .interest-card p {
+    font-size: 1rem;
+    margin: 0.35rem 0 0;
+    text-indent: 0;
+}
+
+.personal-item .badge {
+    align-self: start;
+    white-space: nowrap;
+}
+
+.interest-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.75rem;
+}
+
+.interest-card {
+    list-style: none;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.interest-card img {
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+    display: block;
+    height: auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+.interest-card h3 {
+    font-family: var(--body);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0.9rem;
+}
+
+.reading-list {
+    border-left: 3px solid var(--button);
+    padding-left: 1.3rem;
+}
+
+.reading-list h2 {
+    margin-top: 0.35rem;
+}
+
+.reading-list ul {
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+}
+
+.reading-list li {
+    border-bottom: 1px dotted var(--underline);
+    padding: 0.75rem 0;
+}
+
+.book-heading {
+    align-items: baseline;
+    display: flex;
+    font-size: 1.05rem;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.reading-list small {
+    opacity: 0.8;
+    text-align: right;
+}
+
+.book-opinion {
+    font-size: 0.95rem;
+    margin: 0.75rem 0 0;
+    min-height: 3.25rem;
+    padding: 0.55rem 0.7rem;
+    text-indent: 0;
+}
+
+.reading-list__note {
+    font-size: 0.95rem;
+    margin: 1.25rem 0 0;
+    text-indent: 0;
+}
+
+.games-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.75rem;
+}
+
+.game-card {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.game-card img {
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.game-card h3 {
+    font-family: var(--body);
+    font-size: 1.35rem;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0.9rem 0 0;
+}
+
 /* Cards */
 .card {
     list-style: none;
@@ -416,6 +588,37 @@ footer {
     .pro-img {
         height: auto;
         max-width: 100%;
+    }
+
+    .personal-intro {
+        margin-top: 3rem;
+    }
+
+    .personal-item {
+        grid-template-columns: 1.75rem 1fr;
+    }
+
+    .personal-item .badge {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-card {
+        min-height: auto;
+    }
+
+    .book-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+
+    .reading-list small {
+        text-align: left;
     }
 }
 

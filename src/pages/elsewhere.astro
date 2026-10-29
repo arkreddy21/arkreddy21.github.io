@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Elsewhere | Rama Krishna";
+---
+
+<Layout pageTitle={pageTitle}>
+    <div class="personal-intro">
+        <h1>Elsewhere</h1>
+        <p class="personal-intro__lede">
+            The things I build, tinker with, and keep coming back to when I am not working on hardware.
+        </p>
+    </div>
+
+    <!-- <section class="personal-section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Side projects</h2>
+        <p>
+            Small experiments and useful tools live here. Some start as a weekend idea, others stick around
+            long enough to become part of my setup.
+        </p>
+        <div class="personal-list">
+            <article class="personal-item">
+                <span class="personal-item__number">01</span>
+                <div>
+                    <h3>Home lab notes</h3>
+                    <p>Services, scripts, and lessons from running my own little corner of the internet.</p>
+                </div>
+                <span class="badge">in progress</span>
+            </article>
+            <article class="personal-item">
+                <span class="personal-item__number">02</span>
+                <div>
+                    <h3>Small hardware projects</h3>
+                    <p>Boards, sensors, and other ideas that are more fun once there is something physical to debug.</p>
+                </div>
+                <span class="badge">notes soon</span>
+            </article>
+        </div>
+    </section> -->
+
+    <section class="personal-section" aria-labelledby="hobbies-heading">
+        <h2 id="hobbies-heading">Things I like doing</h2>
+        <div class="interest-grid">
+            <div class="interest-card">
+                <img src="/selfhosted.png" alt="A home lab setup" />
+                <h3>Self-hosting</h3>
+                <p>Keeping useful services close to home. Hosting Mailserver, Immich, Seafile and more.</p>
+                <p>Expanding my knowledge on docker, dns, and the whole networking and security stack.</p>
+            </div>
+            <div class="interest-card">
+                <img src="/p1s.png" alt="A 3D-printed project" />
+                <h3>3D printing</h3>
+                <p>Designing practical parts, tuning the printer, and occasionally making a problem with more parts.</p>
+            </div>
+            <!-- TODO: add tinkering linux and OSS. tiny contributions to linux opensource desktop software -->
+        </div>
+    </section>
+
+    <section class="personal-section reading-list" aria-labelledby="reading-heading">
+        <div>
+            <h2 id="reading-heading">Books I like</h2>
+        </div>
+        <ul>
+            <li>
+                <div class="book-heading"><span>Computer Architecture: A Quantitative Approach</span><small>Hennessy, Patterson</small></div>
+                <p class="book-opinion">Teaches how processors and memory systems are designed, using measurements and performance data to justify each design choice.</p>
+            </li>
+            <li>
+                <div class="book-heading"><span>Computer Networking: A Top Down Approach</span><small>Kurose, Ross</small></div>
+                <p class="book-opinion">Explains how the internet works by starting with applications like the web and email, then working down through transport, network, and link layers.</p>
+            </li>
+            <li>
+                <div class="book-heading"><span>Practical Electronics for Inventors</span><small>Scherz, Monk</small></div>
+                <p class="book-opinion">A hands-on reference that covers electronics theory, components, and circuits in an approachable way for hobbyists and makers.</p>
+            </li>
+        </ul>
+        <p class="reading-list__note">Some of the books that helped me throughout my learning journey.</p>
+    </section>
+
+    <section class="personal-section games-list" aria-labelledby="games-heading">
+        <h2 id="games-heading">Games I like</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <img src="/HK_banner.jpg" alt="Cover image for Hollow Knight" />
+                <h3>Hollow Knight</h3>
+            </div>
+            <div class="game-card">
+                <img src="/skong_banner.jpg" alt="Cover image for Hollow Knight: Silksong" />
+                <h3>Hollow Knight: Silksong</h3>
+            </div>
+            <div class="game-card">
+                <img src="/persona-5.webp" alt="Cover image for Persona 5" />
+                <h3>Persona 5</h3>
+            </div>
+        </div>
+    </section>
+</Layout>
